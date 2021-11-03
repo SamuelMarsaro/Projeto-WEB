@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: 'Poppins';
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Sessao principal */
+
+#principal{
+    background-image: url(imagens/pexels-josh-sorenson-1714208.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 0;
+}
+#principal::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+#principal h1{
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: texto .5s ease forwards 1s;
+}
+#principal h1:nth-child(1){
+    animation-delay: 1s;
+}
+#principal h1:nth-child(2){
+    animation-delay: 2s;
+}
+#principal h1:nth-child(3){
+    animation: texto_nome .5s ease forwards;
+    animation-delay: 3s;
+}
+#principal h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color:turquoise;
+    animation: caixa_texto 1s ease .5s;
+}
+
+#principal h1:nth-child(1) span{
+    animation-delay: .5;
+}
+#principal h1:nth-child(2) span{
+    animation-delay: 1.5s;
+}
+#principal h1:nth-child(3) span{
+    animation-delay: 2.5s;
+}
+#principal .passar{
+    display: inline-block;
+    padding: 10px 30px;
+    color: turquoise;
+    background-color: transparent;
+    border: 2px solid turquoise;
+    border-radius: 10px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: white;
+}
+#principal .passar:hover{
+    color: white;
+    background-color: turquoise;
+}
+/* Fim pagina principal */
+
+/* Lista lateral */
+input[type="checkbox"]{
+    display: none;
+}
+.lista{
+    background-color: rgb(64,224,208,.5);
+    width: 350px;
+    height: 100%;
+    left: -350px;
+    position: absolute;
+    transition: all .5s;
+    z-index: 2;
+}
+input[type="checkbox"]:checked ~ .lista{
+    transform: translateX(350px);
+}
+#listinha{
+    top: 80px;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+
+.linklista{
+    display: block;
+    padding: 20px 5px;
+    color: whitesmoke;
+    font-size: 1.3rem;
+    z-index: 2;
+}
+.linklista:hover{
+    background-color: turquoise;
+    color: black;
+}
+label{
+    background-color: none;
+    padding: 15px;
+    position: absolute;
+    z-index: 3;
+}
+.fotinha{
+    width: 200px;
+    border-radius: 50%;
+}
+#foto{
+    text-align: center;
+    color: white;
+}
+@media screen and (max-width: 600px){
+    .lista{
+        background-color: rgb(37, 155, 143);
+        opacity: 1;
+    }
+}
+
+/* Fim lista lateral */
+
+/* Menu do Portfólio */
+#portfolio{
+    background-image: url(imagens/pexels-josh-sorenson-1714208.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 0;
+}
+#portfolio::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+#portfolio .botoes{
+    display: inline-block;
+    padding: 100px 120px;
+    color: turquoise;
+    background-color: transparent;
+    border: 2px solid turquoise;
+    border-radius: 10px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: .5rem;
+    margin-top: auto;
+    margin-left: 10px;
+    margin-bottom: auto;
+    transition: .3s ease;
+    transition-property: white;
+}
+#portfolio .botoes:hover{
+    color: white;
+    background-color: turquoise;
+}
+
+@media screen and (max-width: 600px){
+    #portfolio .botoes{
+        padding: 15px 20px;
+        margin-right: 10px;
+    }
+}
+/* Fim página potfólio*/
+
+/* Menu redes sociais */
+#redes{
+    background-image: url(imagens/pexels-josh-sorenson-1714208.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 0;
+}
+#redes::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+#redes .linksociais{
+    display: inline-block;
+    padding: 80px 200px;
+    color: turquoise;
+    background-color: transparent;
+    border: 2px solid turquoise;
+    border-radius: 10px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: .5rem;
+    margin-top: auto;
+    margin-left: 10px;
+    margin-bottom: auto;
+    transition: .3s ease;
+    transition-property: white;
+}
+#redes .linksociais:hover{
+    color: white;
+    background-color: turquoise;
+}
+#redes .linksociaistiktok{
+    display: inline-block;
+    padding: 80px 213px;
+    color: turquoise;
+    background-color: transparent;
+    border: 2px solid turquoise;
+    border-radius: 10px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: .5rem;
+    margin-top: auto;
+    margin-left: 10px;
+    margin-bottom: auto;
+    transition: .3s ease;
+    transition-property: white;
+}
+#redes .linksociaistiktok:hover{
+    color: white;
+    background-color: turquoise;
+}
+#redes .linksociaisgithub{
+    display: inline-block;
+    padding: 80px 229px;
+    color: turquoise;
+    background-color: transparent;
+    border: 2px solid turquoise;
+    border-radius: 10px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: .5rem;
+    margin-top: auto;
+    margin-left: 10px;
+    margin-bottom: auto;
+    transition: .3s ease;
+    transition-property: white;
+}
+#redes .linksociaisgithub:hover{
+    color: white;
+    background-color: turquoise;
+}
+@media screen and (max-width: 600px){
+    #redes .linksociais{
+       padding: 10px 20px; 
+    }
+    #redes .linksociaisgithub{
+        padding: 10px 49px;
+    }
+    #redes .linksociaistiktok{
+        padding: 10px 33px;
+    }
+}
+
+/* FIM redes sociais */
+
+/* Projetos */
+#projetos{
+    background-image: url(imagens/pexels-josh-sorenson-1714208.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 0;
+}
+#seta{
+    text-align: center;
+    
+}
+#projetos::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+#projetos h1{
+    display:block;
+    text-align: center;
+    font-size: 6rem;
+    position: relative;
+    color: transparent;
+    animation: texto 1s ease forwards 1s;
+}
+#projetos h1:nth-child(3){
+    display:block;
+    text-align: center;
+    font-size: 6rem;
+    position: relative;
+    color: transparent;
+    animation: textin 1s ease forwards 1s;
+}
+#quemsou .quemsou{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0;
+
+}
+#quemsou .quemsou-titulo{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+#quemsou .quemsou-titulo span{
+    color: turquoise;
+}
+#quemsou .quemsou-topo p{
+    font-size: 1.8rem;
+    margin-top: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+    margin-bottom: 80px;
+}
+#quemsou .feitos{
+    display: absolute;
+    align-items: center;
+    justify-content: center;
+    flex: wrap;
+}
+#quemsou .feito-itens{
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-image:url(imagens/pexels-fauxels-3184454.jpg);
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+}
+#quemsou .feito-itens::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgb(11, 31, 31);
+    opacity: .8;
+    z-index: -1;
+}
+#quemsou .feitos .icon{
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+}
+#quemsou .feitos .icon:hover{
+    height: 90px;
+    width: 90px;
+    margin-bottom: 20px;
+}
+#quemsou .feitos .icon img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+#quemsou .feito-itens h2{
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+#quemsou .feito-itens p{
+    color: white;
+    text-align: left;
+    font-size: 1.5rem;
+}
+#quemsou a{
+    color: white;
+}
+
+/*FIM Quem sou + projetos */
+
+/* Keyframes para as animações */
+
+@keyframes caixa_texto {
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes texto {
+    100%{
+        color: white;
+    }
+}
+@keyframes textin {
+    100%{
+        color: turquoise;
+    }
+}
+
+@keyframes texto_nome {
+    100%{
+        color: turquoise;
+    }
+}
